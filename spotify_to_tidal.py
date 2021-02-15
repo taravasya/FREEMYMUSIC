@@ -23,7 +23,7 @@ r = r.json()
 
 
 if 'error' in r and r['error']['status'] > 0:
-	os.system(os.path.join('python.exe ') + os.path.join(__location__ + '/spotify_to_tidal_token.py'))
+	os.system(os.path.join('python.exe ') + os.path.join(__location__ + '/spotify_token.py'))
 	access_token = open(os.path.join(__location__ + '/spotify_token.txt')).read()
 	headers = {
 	    'Authorization': 'Bearer {token}'.format(token=access_token),
