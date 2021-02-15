@@ -21,14 +21,14 @@ def try_import(import_tracks, service, my_playlist):
 	uid = session.user.id
 	favorites = tidalapi.Favorites(session, uid)
 
-	# УДАЛИТЬ МОЙ ЕЖЕДНЕВНЫЙ SPOTIFY.ПЛЕЙЛИСТ:
+	# УДАЛИТЬ МОЙ ПЛЕЙЛИСТ:
 
 	playlists = session.get_user_playlists(uid)
 	for playlist in playlists:
 			if	playlist.name == 'FreeMyMusic '+my_playlist:
 					favorites.delete_playlist(playlist.id)
 
-	# СОЗДАТЬ МОЙ ЕЖЕДНЕВНЫЙ SPOTIFY.ПЛЕЙЛИСТ СНОВА:
+	# СОЗДАТЬ МОЙ ПЛЕЙЛИСТ СНОВА:
 	favorites.add_playlist('FreeMyMusic '+my_playlist,'FreeMyMusic from ' + service +' playlist')
 	playlists = session.get_user_playlists(uid)
 	for playlist in playlists:

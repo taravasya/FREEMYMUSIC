@@ -6,7 +6,7 @@ import re
 import codecs
 
 if tidal_import_playlist == '':
-	tidal_import_playlist = 'My Spotify'
+	tidal_import_playlist = 'Spotify'
 	
 BASE_URL = 'https://api.spotify.com/v1/'
 
