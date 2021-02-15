@@ -1,4 +1,4 @@
 # FREEMYMUSIC
-Python script for import/export playlists content from some stream services  
+Python скрипт, для простого переноса / импорта / экспорта содержимого плейлистов, с некоторых стриминговых сервисов.  
 
-This cript use the python-tidal https://github.com/tamland/python-tidal
+Этот скрипт используется вместе с python-tidal https://github.com/tamland/python-tidal
