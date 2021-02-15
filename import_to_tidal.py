@@ -25,14 +25,14 @@ def try_import(import_tracks, service, my_playlist):
 
 	playlists = session.get_user_playlists(uid)
 	for playlist in playlists:
-			if	playlist.name == 'FreeMyMusic_'+my_playlist:
+			if	playlist.name == 'FreeMyMusic '+my_playlist:
 					favorites.delete_playlist(playlist.id)
 
 	# СОЗДАТЬ МОЙ ЕЖЕДНЕВНЫЙ SPOTIFY.ПЛЕЙЛИСТ СНОВА:
-	favorites.add_playlist('FreeMyMusic_'+my_playlist,'FreeMyMusic from ' + service +' playlist')
+	favorites.add_playlist('FreeMyMusic '+my_playlist,'FreeMyMusic from ' + service +' playlist')
 	playlists = session.get_user_playlists(uid)
 	for playlist in playlists:
-			if	playlist.name == 'FreeMyMusic_'+my_playlist:
+			if	playlist.name == 'FreeMyMusic '+my_playlist:
 				playlist_id = playlist.id
 
 	for import_track in import_tracks:

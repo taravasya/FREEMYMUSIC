@@ -5,6 +5,9 @@ import sys, os
 import re
 import codecs
 
+if tidal_import_playlist == '':
+	tidal_import_playlist = 'My Spotify'
+	
 BASE_URL = 'https://api.spotify.com/v1/'
 
 __location__ = os.path.realpath(
