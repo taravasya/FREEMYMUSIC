@@ -41,7 +41,7 @@ https://open.spotify.com/playlist/37i9dQZF1E39YIECalsJAz
 https://mega.nz/file/3BhSDIKY#ou9_6shYheDdkZdqh8_nH3USHSPkeGRJObnwF-Vf3rc  
 Распакуйте этот архив в любое удобное для Вас место, с учётом того, что в пути к распакованным файлам, не должно быть кириллицы.  
 Затем скачайте последний релиз моего скрипта:  
-https://github.com/taravasya/FREEMYMUSIC/releases  
+https://github.com/taravasya/FREEMYMUSIC/releases/latest 
 И распакуйте его содержимое в папку *freemymusic* с подтверждением замены файлов.
 
 В распакованной папке, найдите файл MYSETTINGS.py (в проводнике Windows, возможно не будет отображаться расширение файла и тогда он будет выглядеть как MYSETTINGS ), нажмите на нём правой клавишей мыши, и выберите пункт, “Открыть с помощью”, и далее найдите Notepad++ (это действие наглядно видно на моём демонстрационном видео).
