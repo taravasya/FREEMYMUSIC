@@ -68,28 +68,34 @@ def try_import(import_tracks, service, my_playlist):
 				if tracks_results > 0:
 					start_track_results = tracks_results
 					for result in do_search.tracks:
-						s = set(result.artists[0].name.lower().split()) & set(track_artist.lower().split())
-						if s:
-							results_to_log = (str(tracks_results) + ' >> ' + result.name + ' ||| ' + result.artists[0].name + ' ||| ' + result.album.name)
-							favorites.add_playlist_track(result.id, playlist_id, 999)
-							tracks_results = start_track_results
+						for each_artist in result.artists:
+							s = set(each_artist.name.lower().split()) & set(track_artist.lower().split())
+							if s:
+								results_to_log = (str(tracks_results) + ' >> ' + result.name + ' ||| ' + result.artists[0].name + ' ||| ' + result.album.name)
+								favorites.add_playlist_track(result.id, playlist_id, 999)
+								tracks_results = start_track_results
+								break
+							else:
+								tracks_results = 5
+						if tracks_results != 5:
 							break
-						else:
-							tracks_results = 5
 
 					if tracks_results == 5:
 						track_name = re.sub('( - .*)|(\(?feat .*)', '', track_name)
 						do_search_last = session.search('track', track_name + ' ' + track_artist, 10)
 						if len(do_search_last.tracks) > 0:
 							for result_last in do_search_last.tracks:
-								s = set(result_last.artists[0].name.lower().split()) & set(track_artist.lower().split())
-								if s:
-									results_to_log = (str(tracks_results) + ' >> ' + result_last.name + ' ||| ' + result_last.artists[0].name + ' ||| ' + result_last.album.name)
-									favorites.add_playlist_track(result_last.id, playlist_id, 999)
+								for each_artist_last in result_last.artists:
+									s = set(each_artist_last.name.lower().split()) & set(track_artist.lower().split())
+									if s:
+										results_to_log = (str(tracks_results) + ' >> ' + result_last.name + ' ||| ' + result_last.artists[0].name + ' ||| ' + result_last.album.name)
+										favorites.add_playlist_track(result_last.id, playlist_id, 999)
+										break
+									else:
+										tracks_results = 6
+										results_to_log = ('!!!! >> ' + track_name + ' by ' + track_artist)
+								if tracks_results != 6:
 									break
-								else:
-									tracks_results = 6
-									results_to_log = ('!!!! >> ' + track_name + ' by ' + track_artist)
 						else:
 							results_to_log = ('!!! >> ' + track_name + ' by ' + track_artist)
 				
