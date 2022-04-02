@@ -1,0 +1,30 @@
+body {
+	background-image: url("../../assets/imgs/bg.jpg");
+	font-family: tahoma,geneva,sans-serif;
+	font-size: 14px;
+	text-align: center;
+	color: #ADD8E6;
+	margin: 0px;
+}
+
+.fmm_title {
+    margin-top: 3px;
+    font-family: 'Yesteryear', cursive;
+    font-size: 33px;
+}
+
+.fmm_title_brand {
+	margin-top: -5px;
+    font-size: 11px;
+}
+
+.fmm_service_items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.fmm_service_item {
+	width: 300px;
+	height: 300px;
+}
