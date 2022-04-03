@@ -9,7 +9,7 @@
 <html lang="ru">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=650, user-scalable=yes" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 		<!-- styles -->
 		<link rel="stylesheet" type="text/css" href="assets/css/fmm_style.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yesteryear">
@@ -19,7 +19,7 @@
 	<body>
 	<div class="fmm_meta_company"></div>
 	<div class="fmm_head">
-        <div class="fmm_title">Free My Music!</div><div class="fmm_title_brand">Кроссплатформенный менеджер музыкальных коллекций</div>
+		<img class="fmm_logo" src="assets/imgs/logo.svg">
     </div>
 	<div class="fmm_main">
         <div class="fmm_service_items">
