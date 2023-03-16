@@ -2,3 +2,4 @@
 *_tmp/
 logs/
 private_*
+sftp-config.json

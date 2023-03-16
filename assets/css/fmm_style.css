@@ -1,39 +1,60 @@
 body {
-	background-image: url("../../assets/imgs/bg.jpg");
+	/*background-image: url("../../assets/imgs/bg.jpg");*/
+	background-color: #1e3c42;
 	font-family: tahoma,geneva,sans-serif;
 	font-size: x-large;
 	text-align: center;
 	color: #ADD8E6;
 	margin: 0px;
 }
-
 * {
   box-sizing: border-box;
 }
-
 .fmm_title {
     margin-top: 3px;
     font-family: 'Yesteryear', cursive;
     font-size: 33px;
 }
-
 .fmm_title_brand {
 	margin-top: -5px;
     font-size: 11px;
 }
-
+.fmm_userspace {
+    height: 5vh;
+}
 .fmm_service_items {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
-
 .fmm_service_item {
 	width: 300px;
 	height: 300px;
 	max-width: 40%;
 }
+.fmm_head {
+	background-color: #1e3c42;
+    -webkit-box-shadow: 0px 8px 18px 5px rgb(0 0 0 / 80%);
+    -moz-box-shadow: 0px 8px 18px 5px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 8px 18px 5px rgb(0 0 0 / 30%);
+    border-top: 1px solid #2f5962;
+    border-bottom: 1px solid #2f5962;
+    position: sticky;
+    top: 0px;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+.fmm_logo {
 
-img.fmm_logo {
-    max-height: 150px;
+}
+.fmm_logo_img {
+	min-height: 20vh;
+	margin-bottom: -5px;
+}
+.fmm_settings {
+	width: 100%;
+    text-align: left;
+}
+.fmm_main {
 }
